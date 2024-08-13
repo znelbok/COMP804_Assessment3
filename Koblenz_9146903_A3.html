@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
+<script type="text/javascript">
+// Pass the message in from the button click to the function
+		
+	//Function for Task 6 to create a highlight for all elements on the page when clicked.
+	//The elements is passed in as a variable to the function.
+		function highlightElement(element) {
+        // Remove highlight from all elements
+        const highlightedElements = document.querySelectorAll('.highlight');
+        highlightedElements.forEach(function(el) {
+            el.classList.remove('highlight');
+        });
 
+        // Add highlight to the clicked element
+        element.classList.add('highlight');
+        }
+        
+        function displayMessage(message) {
+            document.getElementById('t4txtField').value = message;
+        }
+
+        function displayImage(imageUrl) {
+            document.getElementById('t4ImageContainer').innerHTML = '<img src="' + imageUrl + '" alt="Image">';
+        }
+
+        function displayMessage2(msg2) {
+            document.getElementById('t4txtMsg').innerHTML = msg2;
+        }
+		
+		
+		
+</script>
   <head>
     <title>COMP804 Assessment 3 - 2024</title>
+
     <style>
+        h1{
+            font-size: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
         .task1_bg{
-            font-family: 'Courier New', Courier, monospace;
+            
             border:2px;
             border-radius: 5px;
             border-style:groove;
@@ -18,7 +53,8 @@
 
         }
         .task1_h1{
-            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
             font-style: normal;
             color:white;
         }
@@ -33,14 +69,15 @@
             color:gold;
         }
 
-        table{
+        .table2{
             border: 1px;
             border-style: solid;
             border-color: dimgrey;
             border-collapse: collapse;
-            font-family: Arial, Helvetica, sans-serif;
-            width: 75%;
-            
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .task2_header{
@@ -55,11 +92,20 @@
         .task2_evenrow{
             background-color: lightgray;
         }
+
+        .task2_activitycell{
+            border-style: solid;
+            border-right: 2px || solid || white;
+            border-right-color: white;
+            border-left: 0px;
+            border-top: 0px;
+            border-bottom: 0px;
+        }
         td{
             padding-left: 15px;
             padding-top: 10px;
             padding-bottom: 10px;
-            font-size: 20px;
+            font-size: 16px;
             text-align: left;
             border: 1px;
             border-style: solid;
@@ -68,80 +114,342 @@
         }
         th{
             padding-left: 5px;
-            border-right: 1px;
-            
+            border-right: 2px;
         }
 
+        .task3_header{
+            background-color: rgb(89, 154, 240);
+            font-size: 26px;
+            text-align: center;
+            padding: 50%;
+        }
+        /* Task 3 Styles */
+        .table3{
+            border: 1px;
+            border-style: solid;
+            border-color: dimgrey;
+            border-collapse: collapse;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imgTable{
+			/* constrain the image to 200 pixels wide and to maintain correct aspect ratio set the height to auto */
+			max-width: 200px;
+			height: auto;
+		}
+
+        #t4ImageContainer {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: auto;
+            height: 200px;
+        }
+        .highlight {
+            border: 3px solid rgb(95, 54, 241);
+            border-radius: 5px;
+            /* background-color: lightyellow; */
+        }
+        #t4txtField, #t4txtMsg {
+            font-size: 26px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
     </style>
   </head>
-  <body>
+
+<body>
+    <h1>Mykel Koblenz - 9146903</h1>
+    <h1>COMP804 Assignment 1</h1>
     <!-- Task 1 -->
-    <div class="task1_bg">
+    <br></br>
+    <h1>Task 1</h1>
+    <br></br>
+        <div class="task1_bg">
         <h1 class="task1_h1">9146903   Mykel Koblenz</h1>
         <h2 class="task1_h2">COMP804: Web Security</h2>
         <h3 class="task1_h3">Assignment 1, due 19/08/2024</h3>
     </div>
 
+
+<br></br>
+<h1>Task 2</h1>
+<br></br>
+
     <!-- Task 2 -->
-
-    <table>
-<tr class="task2_header">
-    <th>Activity</th>
-    <th>Date</th>
-</tr>
-<tr class="task2_oddrow">
-    <td>First day to enrol for re-enrolling (continuing students)</td>
-    <td>20 Nov 2023</td>
-</tr>
-<tr class="task2_evenrow">
-    <td>Orientation</td>
-    <td>16 Jul 2024</td>
-</tr>
-<tr class="task2_oddrow">
-    <td>Lectures Commence (weeks 1-10)</td>
-    <td>22 Jul - 27 Sep 2024</td>
-</tr>
-<tr class="task2_evenrow">
-    <td>Last day to enrol / add subjects yourself</td>
-    <td>02 Aug 2024</td>
-</tr>
-<tr class="task2_oddrow">
-    <td>Last day to enrol / add subjects with Head of Students approval</td>
-    <td>09 Aug 2024</td>
-</tr>
-<tr class="task2_evenrow">
-    <!-- Unordered list -->
-    <td>Census Date
-        <ul>
-            <li>Fees due</li>
-            <li>Last day to withdraw from subject/s without paying for them</li>
-            <li>HECS / FEE HELP debt reporting date</li>
-            <li>Last day to change HECS / FEE HELP billing option</li>
-        </ul>
-    <a href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659">Learn more about Census date ></a>
-    </td>
-    <td>31 Aug 2024</td>
-</tr>
-
+    <table class="table2">
+        <tr class="task2_header">
+            <th class="task2_activitycell">Activity</th>
+            <th>Date</th>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>First day to enrol for re-enrolling (continuing students)</td>
+            <td>20 Nov 2023</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <td>Orientation</td>
+            <td>16 Jul 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>Lectures Commence (weeks 1-10)</td>
+            <td>22 Jul - 27 Sep 2024</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <td>Last day to enrol / add subjects yourself</td>
+            <td>02 Aug 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>Last day to enrol / add subjects with Head of Students approval</td>
+            <td>09 Aug 2024</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <!-- Unordered list -->
+            <td>Census Date
+                <ul>
+                    <li>Fees due</li>
+                    <li>Last day to withdraw from subject/s without paying for them</li>
+                    <li>HECS / FEE HELP debt reporting date</li>
+                    <li>Last day to change HECS / FEE HELP billing option</li>
+                </ul>
+            <a id="attackImage" href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659">Learn more about Census date ></a>
+            </td>
+            <td>31 Aug 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>Student Services and Amenities Fees Due</td>
+            <td>01 Sep 2024</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <td>Last day to withdraw without academic penalty - subject deleted from record<br>
+                Fail grade recorded if subject withdrawn after this date </td>
+            <td>20 Sep 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>Mid-Session Recess (1 week)</td>
+            <td>30 Sep - 04 Oct 2024</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <td>Lectures Recommence (weeks 11-13)</td>
+            <td>07 Oct - 25 Oct 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>Study Recess (1 week)</td>
+            <td>28 Oct - 01 Nov 2024</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <td>Exams (2 weeks)</td>
+            <td>02 Nov - 14 Nov 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>End of session break commences</td>
+            <td>15 Nov 2024</td>
+        </tr>
+        <tr class="task2_evenrow">
+            <td>Release of Results</td>
+            <td>28 Nov 2024</td>
+        </tr>
+        <tr class="task2_oddrow">
+            <td>Supplementary and deferred exam period</td>
+            <td>09 Dec - 13 Dec 2024</td>
+        </tr>
     </table>
+    <br></br>
+
+<!-- Task 3 -->
+
+    <h1>Task 3 - HTML & CSS</h1>
+    <br></br>
+    <table class = "table3">
+        <tr class="task3_header">
+            <th>Name</th>
+            <th>Web Attacks</th>
+        </tr>
+        <tr>
+            <td>
+                Cross-Site Scripting<br>
+                <br>
+                <img class="imgTable" src="images/Cross-Site-Scripting.webp" alt="Cross Site Scripting"><br>
+                 Source: www.iheavy.com
+            </td>
+            <td>
+                Tricks a browser into delivering malicious client-side scripts to the victim's browser, which will automatically execute it once received.
+                <br>
+                <br>
+                <a href="https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself">www.tripwire.com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>SQL Injection Attacks
+                <br>
+                <br>
+                <img class="imgTable" src="images/SQLInject.png" alt="SQL Injection"><br>
+                Source: 
+            </td>
+            <td>Placing malicious SQL commands into a SQL database to allow unauthorised database manipluation 
+                <br>
+                <br>
+                <a href="https://www.imperva.com/learn/application-security/sql-injection-sqli/">www.imperva.com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>Broken Authentication
+                <br>
+                <br>
+                <img class="imgTable" src="images/BrokenAuth.jpg" alt="Broken Authentication"><br>
+                Source: 
+            </td>
+
+            <td>Broken Authentication is the result of poorly implemented password or token secuity.  It allows the attacker to compromise and assume the account's identity
+                <br>
+                <br>
+                <a href="https://www.contrastsecurity.com/glossary/broken-authentication">www.contrastsecurity.com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>Drive-By Download
+                <br>
+                <br>
+                <img class="imgTable" src="images/DriveByDLoad.svg" alt="Drive-By Download"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>Password-Based Attacks                <br>
+                <br>
+                <img class="imgTable" src="images/PasswordAttack.jpg" alt="Password-Based Attacks"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>Fuzzing
+                <br>
+                <br>
+                <img class="imgTable" src="images/Fuzzing.webp" alt="Fuzzing"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>Using Components with Known Vulnerabilities
+                <br>
+                <br>
+                <img class="imgTable" src="images/SQLInject.png" alt="Known Vulnerabilities"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>DDoS (Distributed Denial-of-Service)
+                <br>
+                <br>
+                <img class="imgTable" src="images/DDOS.jpg" alt="DDoS"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>MiTM (Man-in-the-Middle)
+                <br>
+                <br>
+                <img class="imgTable" src="images/MITM.jpg" alt="Man-in-the-Middle"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        <tr>
+            <td>Directory Traversal
+                <br>
+                <br>
+                <img class="imgTable" src="images/DirectTrans.jpg" alt="Directory Traversal"><br>
+                Source: 
+            </td>
+
+            <td>Desc1
+                <br>
+                <br>
+                <a href="">com</a>    
+            </td>
+        </tr>
+        </table>
+        <br></br>
+
+<!-- Task 4 -->
+
+        <h1>Task 4 - Javascript with button</h1>
+        <br>
+        Note: Images used in this task are free and courtsey of <a href="https://www.vecteezy.com" target="_blank">Vecteezy.com</a> 
+        <br></br>
+        <!--Create the buttons and call each function required to complete the task.  A value is passed to each function to create the required output.-->
+        <button onclick="displayMessage('User clicks Cat');
+                         displayImage('images/cat.jpg'); 
+                         displayMessage2('Cat is clicked');
+                         highlightElement(this);">Cat
+        </button>
+        <button onclick="displayMessage('User clicks Dog');
+                         displayImage('images/dog.jpg');
+                         displayMessage2('Dog is clicked');
+                         highlightElement(this);">Dog
+        </button>
+        <button onclick="displayMessage('User clicks Frog');
+                         displayImage('images/frog.jpg'); 
+                         displayMessage2('Frog is clicked');
+                         highlightElement(this);">Frog
+        </button>
+        <br><br>
+        <!-- text field -->
+	    <input type="text" id="t4txtField" >
+        <br><br>
+        <!-- Message -->
+        <span style=color:blueviolet id="t4txtMsg"></span>
+        <br><br>
+        <!-- Image -->
+         <!-- Image is costrained to 200 pixels high, but retains aspect ratio (auto width) -->
+        <div id="t4ImageContainer"/></div>
+        <br>
+        <br>
+        <h1>Task 5 - Github Repository</h1>
+        <br>
+        <a href="report/githubreport.pdf">Github Report</a>    
+        <br><br><br>
+</body>
+</html>
+	
 
     
-
-
-
-    <!--        <table>
-            <tr>
-                <td>Fees due</td>
-            </tr>
-            <tr>
-                <td>Last day to withdraw from subject/s without paying for them</td>
-            </tr>
-            <tr>
-                <td>HECS / FEE HELP debt reporting date</td>
-            </tr>
-            <tr>
-                <td>Last day to change HECS / FEE HELP billing option</td>
-            </tr>
-        </table>
--->
-	</body>
