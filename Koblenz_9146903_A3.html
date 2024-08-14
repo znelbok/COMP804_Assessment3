@@ -277,10 +277,13 @@
                  Source: www.iheavy.com
             </td>
             <td>
-                Tricks a browser into delivering malicious client-side scripts to the victim's browser, which will automatically execute it once received.
+                Tricks a browser into delivering malicious client-side scripts to the victim's browser, which will automatically execute it once received.  There are two popular types of CSS, Reflected and Persistent.<br><br>
+                Reflected CSS has the malicious code added to the end of the url of a website.  This attacked often replies on a degree of social engineering to achieve its goal.<br><br>
+                Persistent CSS is when the malicious code is posted to a site such as a forum and the site does not sanitise the input from the user.  Thus when other users load the page,
+                the malicious code is executed on their machine
                 <br>
                 <br>
-                <a href="https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself">www.tripwire.com</a>    
+                <a href="https://www.cloudflare.com/en-au/learning/security/threats/cross-site-scripting/">www.cloudflare.com</a>    
             </td>
         </tr>
         <tr>
@@ -288,12 +291,14 @@
                 <br>
                 <br>
                 <img class="imgTable" src="images/SQLInject.png" alt="SQL Injection"><br>
-                Source: 
+                Source: inside.wooster.edu
             </td>
-            <td>Placing malicious SQL commands into a SQL database to allow unauthorised database manipluation 
+            <td>Placing malicious SQL commands into a SQL database to allow unauthorised database manipluation. Websites can store highly sensitive personal information in SQL databases and
+                if not secured correctlyan attacker can gain access or manipulate the data.  Programmers need to take care with how they use their SQL commands and ensure that they have secured the access
+                to teh data in teh database only to those that have the correct permissions.
                 <br>
                 <br>
-                <a href="https://www.imperva.com/learn/application-security/sql-injection-sqli/">www.imperva.com</a>    
+                <a href="https://inside.wooster.edu/technology/an-introduction-to-sql-injection-attacks/">inside.wooster.edu</a>    
             </td>
         </tr>
         <tr>
@@ -301,13 +306,16 @@
                 <br>
                 <br>
                 <img class="imgTable" src="images/BrokenAuth.jpg" alt="Broken Authentication"><br>
-                Source: 
+                Source: www.linkedin.com
             </td>
 
-            <td>Broken Authentication is the result of poorly implemented password or token secuity.  It allows the attacker to compromise and assume the account's identity
+            <td>Broken Authentication is the result of poorly implemented password or token secuity.  Popular methods of attack include credential stuffing, dictionary attacks and brute forcing.
+                It allows the attacker to compromise and assume the account's holders identity.<br>
+                This is a widespread issue and requires good session managmenet in the form of access control and authentication to prevent this type of attack. 
                 <br>
                 <br>
-                <a href="https://www.contrastsecurity.com/glossary/broken-authentication">www.contrastsecurity.com</a>    
+                <a href="https://www.contrastsecurity.com/glossary/broken-authentication">www.contrastsecurity.com</a><br>
+                <a href="https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication">owasp.org</a>    
             </td>
         </tr>
         <tr>
@@ -315,20 +323,23 @@
                 <br>
                 <br>
                 <img class="imgTable" src="images/DriveByDLoad.svg" alt="Drive-By Download"><br>
-                Source: 
+                Source: nordvpn.com
             </td>
 
-            <td>Desc1
+            <td>This attack typically refers to malicious code that is installed on the system without the users knowloedge or permission.  The malicious code is often hidden 
+                in other files/downloads and is executed unwittingly by the end user.  Not all code that is loaded unwittingly is malcious, such as adware.  Once installed byt he end user, the 
+                attacker has different opportunities such as spying, remote control or hijacking or data curruption.<br>
+                Ransomeware is a good example of a Drive-By attack.
                 <br>
                 <br>
-                <a href="">com</a>    
+                <a href="https://www.kaspersky.com/resource-center/definitions/drive-by-download">www.kaspersky.com</a>    
             </td>
         </tr>
         <tr>
             <td>Password-Based Attacks                <br>
                 <br>
                 <img class="imgTable" src="images/PasswordAttack.jpg" alt="Password-Based Attacks"><br>
-                Source: 
+                Source: youtube.com
             </td>
 
             <td>Desc1
@@ -342,13 +353,16 @@
                 <br>
                 <br>
                 <img class="imgTable" src="images/Fuzzing.webp" alt="Fuzzing"><br>
-                Source: 
+                Source: code-intelligence.com
             </td>
 
-            <td>Desc1
+            <td>Fuzzing is a well know method of checking code for defects.  It is also used for testing software for security defects and can equally be used by attackers to find weak spots
+                in code to this gain access or call out of bounds data.  Fuzzing is the feeding unusual or incorrect data into code to see how the code responds.<br>
+                Often done my automated system with the output being analysed to confirm if the response is correct or of the code has responded in a way that is unsafe or unacceptable.
                 <br>
                 <br>
-                <a href="">com</a>    
+                <a href="https://www.code-intelligence.com/blog/the-magic-behind-feedback-based-fuzzing">www.code-intelligence.com</a><br>   
+                <a href="https://www.synopsys.com/glossary/what-is-fuzz-testing.html">www.synopsys.com</a> 
             </td>
         </tr>
         <tr>
