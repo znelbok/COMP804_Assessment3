@@ -16,7 +16,7 @@
         element.classList.add('highlight');
         }
         
-        function displayMessage(message) {
+        function displeyText(message) {
             document.getElementById('t4txtField').value = message;
         }
 
@@ -24,7 +24,7 @@
             document.getElementById('t4ImageContainer').innerHTML = '<img src="' + imageUrl + '" alt="Image">';
         }
 
-        function displayMessage2(msg2) {
+        function displayMessage(msg2) {
             document.getElementById('t4txtMsg').innerHTML = msg2;
         }
 		
@@ -448,20 +448,23 @@
         Note: Images used in this task are free and courtsey of <a href="https://www.vecteezy.com" target="_blank">Vecteezy.com</a> 
         <br></br>
         <!--Create the buttons and call each function required to complete the task.  A value is passed to each function to create the required output.-->
-        <button onclick="displayMessage('User clicks Cat');
-                         displayImage('images/cat.jpg'); 
-                         displayMessage2('Cat is clicked');
-                         highlightElement(this);">Cat
+        <button onclick="displeyText('User clicks Cat'); //call function to display tecxt and pass text to be displayed
+                         displayImage('images/cat.jpg'); //call function to display image and pass image to be displayed
+                         displayMessage('Cat is clicked'); //call function to display message and pass text to be displayed
+                         highlightElement(this); //Call function to hightlight the pressed button
+                         ">Cat
         </button>
-        <button onclick="displayMessage('User clicks Dog');
-                         displayImage('images/dog.jpg');
-                         displayMessage2('Dog is clicked');
-                         highlightElement(this);">Dog
+        <button onclick="displeyText('User clicks Dog'); //call function to display tecxt and pass text to be displayed
+                         displayImage('images/dog.jpg'); //call function to display image and pass image to be displayed
+                         displayMessage('Dog is clicked'); //call function to display message and pass text to be displayed
+                         highlightElement(this); //Call function to hightlight the pressed button
+                         ">Dog
         </button>
-        <button onclick="displayMessage('User clicks Frog');
-                         displayImage('images/frog.jpg'); 
-                         displayMessage2('Frog is clicked');
-                         highlightElement(this);">Frog
+        <button onclick="displeyText('User clicks Frog'); //call function to display tecxt and pass text to be displayed
+                         displayImage('images/frog.jpg'); //call function to display image and pass image to be displayed
+                         displayMessage('Frog is clicked'); //call function to display message and pass text to be displayed
+                         highlightElement(this); //Call function to hightlight the pressed button
+                         "> Frog
         </button>
         <br><br>
         <!-- text field -->
@@ -475,9 +478,12 @@
         <div id="t4ImageContainer"/></div>
         <br>
         <br>
+        <!-- Task 5 - Github Report -->
         <h1>Task 5 - Github Repository</h1>
         <br>
-        <a href="report/githubreport.pdf">Github Report</a>    
+        <a href="report/9046903_GIT_Report.pdf">Github Report</a>
+        <br><br>
+        <a href="https://github.com/znelbok/COMP804_Assessment3">Comp804 Assessment 3 on Github</a>    
         <br><br><br>
 </body>
 </html>
